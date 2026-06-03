@@ -202,7 +202,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: center;
   text-align: center;
   position: relative;
-  background: url('../images/barber.jpg') center/cover no-repeat fixed;
+  background: url('../images/barber.jpg') center/cover no-repeat;
+  background-attachment: fixed;
 }
 .hero-overlay {
   position: absolute;
@@ -1124,4 +1125,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .gallery-grid { grid-template-columns: 1fr; }
   .chatbot-window { width: 300px; }
   .hero-btns { flex-direction: column; align-items: center; }
+}
+
+/* Fix: background-attachment fixed no funciona en iOS/Android */
+@media (max-width: 1024px) {
+  #hero {
+    background-attachment: scroll;
+    background-position: center top;
+  }
 }
