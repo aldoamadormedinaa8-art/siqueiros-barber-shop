@@ -108,16 +108,13 @@ document.getElementById('step3Back').addEventListener('click', () => showStep(2)
 document.getElementById('step4Back').addEventListener('click', () => showStep(3));
 
 function fillPaymentSummary() {
-  const deposit = Math.ceil(selectedPrice * 0.3);
-  const rest = selectedPrice - deposit;
   document.getElementById('payService').textContent = selectedService;
-  document.getElementById('payTotal').textContent = `$${selectedPrice} MXN`;
-  document.getElementById('payDeposit').textContent = `$${deposit} MXN`;
-  document.getElementById('payRest').textContent = `$${rest} MXN`;
+  document.getElementById('payDate').textContent = formatDate(selectedDate);
+  document.getElementById('payTime').textContent = selectedTime;
+  document.getElementById('payName').textContent = clientName;
 }
 
 document.getElementById('confirmBooking').addEventListener('click', () => {
-  const deposit = Math.ceil(selectedPrice * 0.3);
   const dateFormatted = formatDate(selectedDate);
   const msg = `¡Hola Siqueiros Barber Shop! 👋
 
@@ -129,10 +126,7 @@ Quisiera reservar mi cita con los siguientes datos:
 👤 *Nombre:* ${clientName}
 📱 *WhatsApp:* ${clientPhone}
 ${clientNote ? `📝 *Detalles:* ${clientNote}\n` : ''}
-💰 *Total:* $${selectedPrice} MXN
-💳 *Anticipo (30%):* $${deposit} MXN
-
-Por favor indíquenme cómo realizar el pago del anticipo. ¡Gracias!`;
+Por favor confirmen mi cita. ¡Gracias!`;
 
   const encoded = encodeURIComponent(msg);
   window.open(`https://wa.me/523223180206?text=${encoded}`, '_blank');

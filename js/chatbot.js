@@ -44,14 +44,8 @@ const responses = {
     Domingo: 10:00 AM – 5:00 PM<br><br>
     ¿Te gustaría reservar una cita? 😊`,
 
-  precio: () => `💰 <strong>Precios:</strong><br>
-    • Corte Básico: $100 MXN<br>
-    • Corte + Barba: $180 MXN<br>
-    • Corte + Diseño: $180 MXN<br>
-    • Afeitado Clásico: $120 MXN<br>
-    • Corte Niño: $80 MXN<br>
-    • Paquete Completo: $300 MXN<br><br>
-    <em>Solo 30% de anticipo para reservar en línea.</em>`,
+  precio: () => `💰 Para conocer los precios de nuestros servicios contáctanos directamente por WhatsApp, con gusto te informamos.<br><br>
+    <a href="https://wa.me/523223180206" target="_blank" style="color:#25D366;font-weight:700;">👉 Escríbenos al WhatsApp</a>`,
 
   ubicacion: () => `📍 Estamos en <strong>San José del Valle, Nayarit</strong>.<br><br>
     ¿Necesitas indicaciones? Escríbenos por WhatsApp: <strong>+52 322 318 0206</strong>`,
